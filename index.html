@@ -18,9 +18,11 @@
         <link rel="stylesheet" href="./assets/css/grid.css" />
         <!-- STYLES CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <!-- RESPONSIVE -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- ------------------- Header ---------------------- -->
+        <!-- ------------------- PC Header ---------------------- -->
         <header class="header">
             <div class="header__inner">
                 <div class="header__row">
@@ -33,7 +35,7 @@
                                 alt=""
                             />
                         </div>
-                        Nguyenthanhquanghuy.th2@gmail.com
+                        <p>Nguyenthanhquanghuy.th2@gmail.com</p>
                     </a>
                     <!-- Logo -->
                     <img
@@ -61,17 +63,57 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Tablet/Mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                            />
+                        </svg>
+                    </label>
                 </div>
+            </div>
+        </header>
+        <!-- ------------------------- TABLET & Mobile Header---------------------------- -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"> </label>
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <img
+                    src="./assets/icons/memoji.svg"
+                    alt="logo"
+                    class="menu-logo"
+                />
+                <!-- Navigation -->
+                <ul>
+                    <li><a href="#features">Dự án</a></li>
+                    <li><a href="#services">Hành trình</a></li>
+                    <li><a href="#resources">Dịch vụ</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
             </div>
         </header>
 
         <!-- ------------------- Hero ---------------------- -->
         <div class="hero">
             <div class="container">
-                <div
-                    class="row row-clos-1 row-cols-sm-1 row-clos-lg-2 hero__inner"
-                >
-                    <div class="hero__media col-lg-5">
+                <div class="row row-clos-1 row-clos-xl-2 hero__inner">
+                    <div class="hero__media col-xl-5 col-lg-12 col-12">
                         <figure>
                             <img
                                 src="./assets/img/user-img.png"
@@ -80,7 +122,9 @@
                             />
                         </figure>
                     </div>
-                    <div class="hero__content col-lg-6 offset-lg-1">
+                    <div
+                        class="hero__content col-xl-6 col-lg-12 col-12 offset-xl-1 offset-lg-0"
+                    >
                         <h1 class="hero__heading">Website Developer</h1>
                         <p class="hero__desc">
                             Thiết kế và sự đơn giản là cốt lõi của công cụ xây
@@ -91,7 +135,7 @@
                         </p>
 
                         <div class="hero__operation">
-                            <a href="#!" class="btn">Đặt cuộc gọi</a>
+                            <a href="#!" class="btn hero__btn">Đặt cuộc gọi</a>
                             <a href="#!" class="hero__link"
                                 >Công việc của tôi</a
                             >
@@ -181,19 +225,23 @@
             <section class="clients">
                 <div class="container">
                     <div
-                        class="row row-clos-1 row-cols-sm-1 row-clos-lg-2 clients__inner"
+                        class="row row-clos-1 row-cols-sm-1 row-clos-lg-1 row-clos-xl-2 clients__inner"
                     >
                         <!-- Clients left -->
-                        <div class="clients__left col-lg-3">
+                        <div
+                            class="clients__left col-12 col-lg-12 col-xl-3 offset-0"
+                        >
                             <h2 class="clients__heading">
                                 Khách hàng gần đây của chúng tôi
                             </h2>
                         </div>
 
                         <!-- Clients right -->
-                        <div class="clients__right col-lg-7 offset-lg-2">
+                        <div
+                            class="clients__right col-12 col-lg-12 col-xl-7 offset-xl-2"
+                        >
                             <div
-                                class="clients__list row row-clos-1 row-cols-sm-2 row-cols-md-4 row-clos-lg-4"
+                                class="clients__list row row-cols-2 row-cols-lg-4 row-clos-xl-4"
                             >
                                 <!-- item 1 -->
                                 <div class="clients-item">
@@ -300,9 +348,13 @@
                             Bên dưới là một số danh mục đặc biệt và là thế mạnh
                             của công ty chúng tôi
                         </p>
-                        <div class="row row-cols-lg-3 special__list">
+                        <div
+                            class="row row-cols-xl-3 row-cols-lg-1 special__list"
+                        >
                             <!-- item 1 -->
-                            <div class="special-item">
+                            <div
+                                class="special-item col-12 col-lg-8 col-xl-4 offset-lg-2 offset-xl-0"
+                            >
                                 <figure class="special-item__image">
                                     <img
                                         src="./assets/img/special-01png.png"
@@ -320,7 +372,9 @@
                             </div>
 
                             <!-- item 2 -->
-                            <div class="special-item">
+                            <div
+                                class="special-item col-12 col-lg-8 col-xl-4 offset-lg-2 offset-xl-0"
+                            >
                                 <figure class="special-item__image">
                                     <img
                                         src="./assets/img/special-02png.png"
@@ -343,7 +397,9 @@
                             </div>
 
                             <!-- item 3 -->
-                            <div class="special-item">
+                            <div
+                                class="special-item col-12 col-lg-8 col-xl-4 offset-lg-2 offset-xl-0"
+                            >
                                 <figure class="special-item__image">
                                     <img
                                         src="./assets/img/special-04png.png"
@@ -359,6 +415,11 @@
                                     elit. Non nisl solor ut elementum turpis.
                                 </p>
                             </div>
+                        </div>
+                        <div class="special-directional">
+                            <div class="special-br special-br-active"></div>
+                            <div class="special-br"></div>
+                            <div class="special-br"></div>
                         </div>
                     </div>
                 </div>
@@ -379,9 +440,13 @@
                             </p>
                         </div>
                         <!-- Recent List -->
-                        <div class="recent__list row row-clos-2">
+                        <div
+                            class="recent__list row row-cols-sm-1 row-cols-lg-1 row-cols-xl-2"
+                        >
                             <!-- recent item 1 -->
-                            <div class="recent-item col">
+                            <div
+                                class="recent-item col-sm-12 col-lg-12 col-xl-5"
+                            >
                                 <div class="recent-item__content">
                                     <h3 class="recent-item__heading">
                                         Trang web Wally
@@ -401,9 +466,16 @@
                                         class="recent-item__img"
                                     />
                                 </div>
+                                <img
+                                    src="./assets/icons/recent-decor.svg"
+                                    alt=""
+                                    class="recent-decor"
+                                />
                             </div>
                             <!-- recent item 2 -->
-                            <div class="recent-item col">
+                            <div
+                                class="recent-item col-sm-12 col-lg-12 col-xl-5"
+                            >
                                 <div class="recent-item__content">
                                     <h3 class="recent-item__heading">
                                         Ứng Dụng Ngân Hàng
@@ -423,9 +495,16 @@
                                         class="recent-item__img"
                                     />
                                 </div>
+                                <img
+                                    src="./assets/icons/recent-decor.svg"
+                                    alt=""
+                                    class="recent-decor"
+                                />
                             </div>
                             <!-- recent item 3 -->
-                            <div class="recent-item col">
+                            <div
+                                class="recent-item col-sm-12 col-lg-12 col-xl-5"
+                            >
                                 <div class="recent-item__content">
                                     <h3 class="recent-item__heading">
                                         Ứng Dụng Website
@@ -445,9 +524,16 @@
                                         class="recent-item__img"
                                     />
                                 </div>
+                                <img
+                                    src="./assets/icons/recent-decor.svg"
+                                    alt=""
+                                    class="recent-decor"
+                                />
                             </div>
                             <!-- recent item 4 -->
-                            <div class="recent-item col">
+                            <div
+                                class="recent-item col-sm-12 col-lg-12 col-xl-5"
+                            >
                                 <div class="recent-item__content">
                                     <h3 class="recent-item__heading">
                                         Trang web Oculus
@@ -467,10 +553,15 @@
                                         class="recent-item__img"
                                     />
                                 </div>
+                                <img
+                                    src="./assets/icons/recent-decor.svg"
+                                    alt=""
+                                    class="recent-decor"
+                                />
                             </div>
                         </div>
                         <div class="recent__bottom">
-                            <a href="#!" class="btn">Tất cả dự án</a>
+                            <a href="#!" class="btn recent-btn">Tất cả dự án</a>
                         </div>
                     </div>
                 </div>
@@ -490,7 +581,9 @@
                             turpis.
                         </p>
                         <!-- Designer list -->
-                        <div class="designer__list row row-cols-lg-3">
+                        <div
+                            class="designer__list row row-cols-3 row-cols-xl-3"
+                        >
                             <!-- item 1 -->
                             <div class="designer-item">
                                 <span class="designer-item__data">08+</span>
@@ -519,7 +612,6 @@
                                 class="designer__video-bg"
                                 src="./assets/img/video.png"
                                 alt=""
-                                class="video"
                             />
                             <svg
                                 class="designer-icon__play"
@@ -723,7 +815,7 @@
                         </h2>
                         <div class="question__list row">
                             <!-- item 1 -->
-                            <div class="question-item col-lg-10">
+                            <div class="question-item col-12 col-lg-10">
                                 <input
                                     type="checkbox"
                                     name=""
@@ -801,7 +893,7 @@
                                 <div class="item-bottom"></div>
                             </div>
                             <!-- item 2 -->
-                            <div class="question-item col-lg-10">
+                            <div class="question-item col-12 col-lg-10">
                                 <input
                                     type="checkbox"
                                     name=""
@@ -879,7 +971,7 @@
                                 <div class="item-bottom"></div>
                             </div>
                             <!-- item 3 -->
-                            <div class="question-item col-lg-10">
+                            <div class="question-item col-12 col-lg-10">
                                 <input
                                     type="checkbox"
                                     name=""
@@ -957,7 +1049,7 @@
                                 <div class="item-bottom"></div>
                             </div>
                             <!-- item 4 -->
-                            <div class="question-item col-lg-10">
+                            <div class="question-item col-12 col-lg-10">
                                 <input
                                     type="checkbox"
                                     name=""
@@ -1035,7 +1127,7 @@
                                 <div class="item-bottom"></div>
                             </div>
                             <!-- item 5 -->
-                            <div class="question-item col-lg-10">
+                            <div class="question-item col-12 col-lg-10">
                                 <input
                                     type="checkbox"
                                     name=""
@@ -1134,7 +1226,7 @@
                         <a href="#!" class="gallery__address"
                             >@interaction_arif
                         </a>
-                        <div class="gallery__list">
+                        <div class="gallery__list row row-cols-lg-3">
                             <div class="gallery-item">
                                 <img
                                     src="./assets/img/gallery-img-01.png"
@@ -1156,6 +1248,11 @@
                                     class="gallery-item__img"
                                 />
                             </div>
+                        </div>
+                        <div class="gallery-br">
+                            <div class="gallery-br-icon br-active"></div>
+                            <div class="gallery-br-icon"></div>
+                            <div class="gallery-br-icon"></div>
                         </div>
                     </div>
                 </div>
@@ -1208,7 +1305,7 @@
                 <div class="footer__inner">
                     <div class="footer__top">
                         <!-- Email address -->
-                        <a href="#!" class="mail-link">
+                        <a href="#!" class="footer-mail-link">
                             <div class="mail-box">
                                 <img
                                     class="mail-icon"
@@ -1222,10 +1319,10 @@
                         <img
                             src="./assets/icons/memoji.svg"
                             alt="logo"
-                            class="logo"
+                            class="footer-logo"
                         />
                         <!-- Navbar -->
-                        <nav class="header__navbar">
+                        <nav class="footer__navbar">
                             <ul class="navbar__list">
                                 <li class="nav__item">
                                     <a href="#!" class="navbar__link">Dự án</a>
